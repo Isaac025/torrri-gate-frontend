@@ -19,3 +19,10 @@ FEATURES
 3. file uploads
 4. eamil sending
 5. Crud operations
+
+registration
+1. input validation
+2. get the input and send to the api as a post request
+3. response - success or error
+4. redirect to the verify page
+error (display error)
