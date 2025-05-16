@@ -1,8 +1,6 @@
-
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { axiosInstance } from "../utils/axiosInstance";
 import { useState, useEffect } from "react";
-
 
 const VerifyEmail = () => {
   const { token } = useParams();
