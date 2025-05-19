@@ -51,7 +51,7 @@ const VerifyEmail = () => {
             Your account has been verified successfully
           </p>
           <Link to="/login">
-            <button className="w-full font-semibold rounded-xl text-center bg-[#0c0c0c] text-[#ffffff] h-[56px] w-[123px]">
+            <button className="w-full font-semibold rounded-xl text-center bg-[#0c0c0c] text-[#ffffff] h-[56px] max-w-[123px]">
               Proceed to login
             </button>
           </Link>
