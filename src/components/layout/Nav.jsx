@@ -80,7 +80,7 @@ const Nav = ({ bg }) => {
             )}
           </div>
           <Link to="/" className="">
-            <div className="flex gap-2 items-center">
+  []          <div className="flex gap-2 items-center">
               <img src={logo} alt="logo" className="ml-2 lg:ml-0" />
               <div>
                 <h2 className="font-medium text-lg hidden lg:block">
