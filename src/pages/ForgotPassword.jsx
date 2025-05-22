@@ -29,14 +29,13 @@ const ForgotPassword = () => {
         ...data,
       });
       if (response.status === 200) {
-        localStorage.setItem("email", data.email)
+        localStorage.setItem("email", data.email);
         redirect("/check-your-email");
-
       }
       // console.log("Forgot Password Data:", data);
     } catch (error) {
       console.log(error);
-      setErrorMessage(error?.response?.data?.message); 
+      setErrorMessage(error?.response?.data?.message);
     } finally {
       setIsSubmitting(false);
     }
