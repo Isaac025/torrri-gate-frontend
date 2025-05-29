@@ -23,8 +23,6 @@ const Register = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(registerSchema) });
 
- 
-
   const handleRegister = async (data) => {
     setIsSubmitting(true);
     try {
