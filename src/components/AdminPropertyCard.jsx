@@ -4,6 +4,7 @@ import { MdOutlineBathtub } from "react-icons/md";
 import { LiaBedSolid } from "react-icons/lia";
 import { TbToolsKitchen } from "react-icons/tb";
 import { FaEllipsis } from "react-icons/fa6";
+//import the following components
 import { axiosInstance } from "../utils/axiosInstance";
 import { useAppContext } from "../hooks/useAppContext";
 import { toast } from "react-toastify";
@@ -20,7 +21,7 @@ const AdminPropertyCard = ({
 }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [currentStatus, setCurrentStatus] = useState(availability);
-  const { token } = useAppContext;
+  const { token } = useAppContext();
 
   const toggleDropdown = () => {
     setShowDropdown((prev) => !prev);
@@ -29,20 +30,21 @@ const AdminPropertyCard = ({
   const handleStatusChange = async (newStatus, propertyId) => {
     setCurrentStatus(newStatus);
     setShowDropdown(false);
-    // console.log(newStatus, propertyId);
 
     //trigger api call here
     try {
       const response = await axiosInstance.patch(
         `/property/landlord/${propertyId}`,
-        { availability: newStatus },
+        {
+          availability: newStatus,
+        },
         { headers: { Authorization: `Bearer ${token}` } }
       );
       if (response.status === 200) {
-        toast.success("Status Updated Successfully");
+        toast.success("status updated successfully");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
