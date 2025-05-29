@@ -53,7 +53,7 @@ const AdminProperty = () => {
   if (isLoading) {
     return <SuspenseLoader />;
   }
-  if (!isLoading && true) {
+  if (!isLoading && total === 0) {
     return <EmptyLandlord />;
   }
 
